@@ -1,0 +1,33 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="list" routerLinkActive="active">Project List</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="detail" routerLinkActive="active">Project Detail</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="counter" routerLinkActive="active">Counter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="post-list" routerLinkActive="active">NGRX</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="rxjs-learning" routerLinkActive="active">RXJS</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" (click)="logoutUser();" routerLinkActive="active">Logout</a>
+              </li> -->
+            </ul>
+            <a href="javascript:void(0)" class="nav-link" (click)="logoutUser();" routerLinkActive="active">Logout</a>
+          </div>
+        </div>
+      </nav>
+</div>

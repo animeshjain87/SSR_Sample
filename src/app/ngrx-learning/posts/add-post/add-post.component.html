@@ -1,0 +1,31 @@
+<div class="col-md-12 mb-4">
+    <form [formGroup]="postForm" (ngSubmit)="onAddPost()">
+        <div class="mb-3">
+            <label for="">Title<span class="text-danger">*</span></label>
+            <input type="text" name="" id="" class="form-control" formControlName="title" [class.is-invalid]="
+            postForm.get('title')?.invalid &&
+            postForm.get('title')?.touched">
+            <div *ngIf="postForm.get('title')?.invalid && postForm.get('title')?.touched">
+                <small class="text-danger" *ngIf="postForm.get('title')?.errors?.required">Title is required</small>
+                <small class="text-danger" *ngIf="postForm.get('title')?.errors?.minlength">Minimum 5 Character is required</small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="">Description<span class="text-danger">*</span></label>
+            <textarea id="" class="form-control" formControlName="description" [class.is-invalid]="
+            postForm.get('description')?.invalid &&
+            postForm.get('description')?.touched">
+            </textarea>
+            <div *ngIf="postForm.get('description')?.invalid && postForm.get('description')?.touched">
+                <small class="text-danger" *ngIf="postForm.get('description')?.errors?.required">Description is required</small>
+                <small class="text-danger" *ngIf="postForm.get('description')?.errors?.minlength">Minimum 5 Character is required</small>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary" [disabled]="!postForm.valid">Add Post</button>
+        </div>
+    </form>
+</div>

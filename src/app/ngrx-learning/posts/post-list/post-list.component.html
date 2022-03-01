@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h5>Add Post</h5>
+            <app-add-post></app-add-post>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h5>Post Lists</h5>
+            <table class="table table-striped my-4">
+                <thead>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let post of posts | async">
+                        <th>{{post.id}}</th>
+                        <th>{{post.title}}</th>
+                        <th>{{post.description}}</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
