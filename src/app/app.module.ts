@@ -37,7 +37,7 @@ import { AddPostComponent } from './ngrx-learning/posts/add-post/add-post.compon
     PostListComponent, AddPostComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     ReactiveFormsModule,
     StoreModule.forRoot({posts:postsReducer})
