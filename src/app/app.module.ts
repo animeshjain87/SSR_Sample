@@ -19,6 +19,7 @@ import { StoreModule } from '@ngrx/store';
 import { PostListComponent } from './ngrx-learning/posts/post-list/post-list.component';
 import { postsReducer } from './ngrx-learning/state/posts.reducers';
 import { AddPostComponent } from './ngrx-learning/posts/add-post/add-post.component';
+import { DynamicComponent } from './ngrx-learning/posts/dynamic/dynamic.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { AddPostComponent } from './ngrx-learning/posts/add-post/add-post.compon
     RxjsFromeventComponent,
     RxjsLearningComponent,
     DebounceTimeComponent,    
-    PostListComponent, AddPostComponent,
+    PostListComponent, AddPostComponent, DynamicComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
