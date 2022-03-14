@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { StoreModule } from '@ngrx/store';
 
 import { DynamicComponent } from './dynamic.component';
 
@@ -8,6 +9,9 @@ describe('DynamicComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [
+        StoreModule.forRoot({})
+      ],
       declarations: [ DynamicComponent ]
     })
     .compileComponents();
